@@ -6,57 +6,45 @@ import SquigglyLines from "../components/SquigglyLines";
 
 export default function HomePage() {
   return (
-    <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
+    <div className="flex flex-col items-center justify-center max-w-6xl min-h-screen py-2 mx-auto">
       <Header />
-      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 sm:mt-20 mt-20 background-gradient">
-        <a
-          href="https://vercel.fyi/roomGPT"
-          target="_blank"
-          rel="noreferrer"
-          className="border border-gray-700 rounded-lg py-2 px-4 text-gray-400 text-sm mb-5 transition duration-300 ease-in-out"
-        >
-          Clone and deploy your own with{" "}
-          <span className="text-blue-600">Vercel</span>
-        </a>
-        <h1 className="mx-auto max-w-4xl font-display text-5xl font-bold tracking-normal text-gray-300 sm:text-7xl">
-          Generating dream rooms{" "}
-          <span className="relative whitespace-nowrap text-blue-600">
-            <SquigglyLines />
-            <span className="relative">using AI</span>
-          </span>{" "}
-          for everyone.
+      <main className="flex flex-col items-center justify-center flex-1 w-full px-4 mt-20 text-center sm:mt-20">
+        <div className="background-gradient"></div>
+        <h1 className="max-w-4xl mx-auto text-gray-300 normal text-8xl font-Domine sm:text-7xl">
+          Generating dream rooms Beautiful, profitable product experiences for
+          everyone.
         </h1>
-        <h2 className="mx-auto mt-12 max-w-xl text-lg sm:text-gray-400  text-gray-500 leading-7">
+        <h2 className="max-w-xl mx-auto mt-12 text-lg leading-7 text-gray-500 sm:text-gray-400">
           Take a picture of your room and see how your room looks in different
           themes. 100% free – remodel your room today.
         </h2>
         <Link
-          className="bg-blue-600 rounded-xl text-white font-medium px-4 py-3 sm:mt-10 mt-8 hover:bg-blue-500 transition"
+          className="px-4 py-3 mt-8 font-medium text-white transition bg-blue-600 rounded-xl sm:mt-10 hover:bg-blue-500"
           href="/dream"
         >
           Generate your dream room
         </Link>
-        <div className="flex justify-between items-center w-full flex-col sm:mt-10 mt-6">
-          <div className="flex flex-col space-y-10 mt-4 mb-16">
-            <div className="flex sm:space-x-8 sm:flex-row flex-col">
+        <div className="flex flex-col items-center justify-between w-full mt-6 sm:mt-10">
+          <div className="flex flex-col mt-4 mb-16 space-y-10">
+            <div className="flex flex-col sm:space-x-8 sm:flex-row">
               <div>
-                <h3 className="mb-1 font-medium text-lg">Original Room</h3>
+                <h3 className="mb-1 text-lg font-medium">Original Room</h3>
                 <Image
                   alt="Original photo of a room with roomGPT.io"
                   src="/original-pic.jpg"
-                  className="w-full object-cover h-96 rounded-2xl"
+                  className="object-cover w-full h-96 rounded-2xl"
                   width={400}
                   height={400}
                 />
               </div>
-              <div className="sm:mt-0 mt-8">
-                <h3 className="mb-1 font-medium text-lg">Generated Room</h3>
+              <div className="mt-8 sm:mt-0">
+                <h3 className="mb-1 text-lg font-medium">Generated Room</h3>
                 <Image
                   alt="Generated photo of a room with roomGPT.io"
                   width={400}
                   height={400}
                   src="/generated-pic-2.jpg"
-                  className="w-full object-cover h-96 rounded-2xl sm:mt-0 mt-2"
+                  className="object-cover w-full mt-2 h-96 rounded-2xl sm:mt-0"
                 />
               </div>
             </div>

@@ -1,0 +1,198 @@
+animated-gradient_animated-gradient__UsGIk canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* @import "//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  text-rendering: geometricPrecision;
+  -webkit-font-smoothing: antialiased;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
+
+/* *,
+:after,
+:before {
+  box-sizing: border-box !important;
+}
+
+@font-face {
+  font-family: Oldschool Grotesk;
+  src: url(https://joinclyde.com/fonts/oldschool-grotesk/OldschoolGrotesk_W-Medium.woff2)
+      format("woff2"),
+    url(/fonts/oldschool-grotesk/OldschoolGrotesk_W-Medium.woff) format("woff");
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Oldschool Grotesk;
+  src: url(https://joinclyde.com/fonts/oldschool-grotesk/OldschoolGrotesk_W-Book.woff2)
+      format("woff2"),
+    url(/fonts/oldschool-grotesk/OldschoolGrotesk_W-Book.woff) format("woff");
+  font-display: swap;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Oldschool Grotesk Compact;
+  src: url(https://joinclyde.com/fonts/oldschool-grotesk/OldschoolGroteskCompact_W-Book.woff2)
+      format("woff2"),
+    url(/fonts/oldschool-grotesk/OldschoolGroteskCompact_W-Book.woff)
+      format("woff");
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Recoleta;
+  src: url(https://joinclyde.com/fonts/recoleta/Recoleta-Regular.woff2)
+      format("woff2"),
+    url(/fonts/recoleta/Recoleta-Regular.woff) format("woff");
+  font-display: swap;
+  font-weight: 400;
+} */
+
+/* :root {
+  --font-recoleta: "Recoleta", serif;
+  --font-oldschool: "Oldschool Grotesk", sans-serif;
+  --font-oldschool-compact: "Oldschool Grotesk Compact", sans-serif;
+} */
+
+:root {
+  --white: #fff;
+  --white-transparent: hsla(0, 0%, 100%, 0);
+  --black: #000;
+  --black-transparent: transparent;
+  --light-grey: #f6f6f4;
+  --light-grey-transparent: hsla(60, 10%, 96%, 0);
+  --dark-grey: #151515;
+  --dark-grey-transparent: hsla(0, 0%, 8%, 0);
+  --purple: #df91f7;
+  --purple-transparent: rgba(223, 145, 247, 0);
+  --yellow: #feed7a;
+  --yellow-transparent: hsla(52, 99%, 74%, 0);
+  --orange: #ff8400;
+  --orange-transparent: rgba(255, 132, 0, 0);
+  --gradient-horizontal: linear-gradient(
+    90deg,
+    var(--yellow) 0%,
+    var(--orange) 48.96%,
+    var(--purple) 100%
+  );
+  --gradient-vertical: linear-gradient(
+    0deg,
+    var(--yellow) 0%,
+    var(--orange) 48.96%,
+    var(--purple) 100%
+  );
+  --ease-in-quad: cubic-bezier(0.55, 0.085, 0.68, 0.53);
+  --ease-in-cubic: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  --ease-in-quart: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  --ease-in-quint: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+  --ease-in-expo: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  --ease-in-circ: cubic-bezier(0.6, 0.04, 0.98, 0.335);
+  --ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-out-cubic: cubic-bezier(0.215, 0.61, 0.355, 1);
+  --ease-out-quart: cubic-bezier(0.165, 0.84, 0.44, 1);
+  --ease-out-quint: cubic-bezier(0.23, 1, 0.32, 1);
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-out-circ: cubic-bezier(0.075, 0.82, 0.165, 1);
+  --ease-in-out-quad: cubic-bezier(0.455, 0.03, 0.515, 0.955);
+  --ease-in-out-cubic: cubic-bezier(0.645, 0.045, 0.355, 1);
+  --ease-in-out-quart: cubic-bezier(0.77, 0, 0.175, 1);
+  --ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+  --ease-in-out-expo: cubic-bezier(1, 0, 0, 1);
+  --ease-in-out-circ: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+html:not(.dev) {
+  scrollbar-width: none !important;
+}
+
+html:not(.dev) body {
+  -ms-overflow-style: none;
+}
+
+html:not(.dev) body::-webkit-scrollbar {
+  width: 0 !important;
+  height: 0 !important;
+}
+
+:root {
+  --layout-columns-count: 4;
+  --layout-columns-gap: 2.6666666667vw;
+  --layout-margin: 5.3333333333vw;
+  --layout-width: calc(100vw - (2 * var(--layout-margin)));
+  --layout-column-width: calc(
+    (
+        var(--layout-width) -
+          ((var(--layout-columns-count) - 1) * var(--layout-columns-gap))
+      ) / var(--layout-columns-count)
+  );
+}
+
+@media (min-width: 800px) {
+  :root {
+    --layout-columns-count: 12;
+    --layout-columns-gap: 1.7361111111vw;
+    --layout-margin: 3.4722222222vw;
+  }
+}
+
+:root {
+  --header-height: 21.3333333333vw;
+  --collapsed-header-height: 22.9333333333vw;
+}
+
+@media (min-width: 800px) {
+  :root {
+    --header-height: 9.0277777778vw;
+    --collapsed-header-height: 6.3888888889vw;
+  }
+}
+
+html {
+  scroll-padding-top: var(--collapsed-header-height);
+  font-feature-settings: "liga", "clig";
+  font-variant-ligatures: common-ligatures;
+  scroll-behavior: auto;
+  overflow: overlay;
+  transition: opacity 1s var(--ease-out-expo);
+}
+
+/* html:not(.is-loaded) {
+  opacity: 0;
+  transition: unset;
+} */
+
+/* body,
+html {
+  overscroll-behavior: none;
+  width: 100%;
+  min-height: 100%;
+}
+
+@media (max-width: 800px) {
+  body,
+  html {
+    overflow-x: hidden;
+  }
+}
+
+body {
+  min-height: 100vh;
+} */
+
+::selection {
+  background-color: var(--purple);
+  color: var(--theme-primary);
+}

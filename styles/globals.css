@@ -1,9 +1,72 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;0,400;0,700;1,100;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;800&family=Raleway:ital,wght@0,200;0,300;0,400;0,700;0,900;1,100;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Instrument+Serif:ital@0;1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=Domine:wght@400;500;600;700&display=swap");
+@import "./gradient.css";
 @media (min-width: 400px) {
-  .background-gradient::before {
+  .background-gradient {
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    right: -50%;
+    bottom: -50%;
+    width: 200%;
+    height: 200vh;
+    z-index: -10;
+
+    background-color: hsl(0 0% 4% / 0.3);
+    background: transparent url("../public/Dark-Clover.png");
+    /* url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: bg-animation 50s infinite;
+    opacity: 0.3;
+    background-blend-mode: overlay;
+    filter: blur(1px);
+    visibility: visible;
+  }
+
+  @keyframes bg-animation {
+    0% {
+      transform: translate(0, 0);
+    }
+    10% {
+      transform: translate(-5%, -5%);
+    }
+    20% {
+      transform: translate(-5%, 5%);
+    }
+    30% {
+      transform: translate(5%, -4%);
+    }
+    40% {
+      transform: translate(-5%, 15%);
+    }
+    50% {
+      transform: translate(-5%, 5%);
+    }
+    60% {
+      transform: translate(5%, 0);
+    }
+    70% {
+      transform: translate(0, 10%);
+    }
+    80% {
+      transform: translate(-5%, 0);
+    }
+    90% {
+      transform: translate(5%, 5%);
+    }
+    100% {
+      transform: translate(5%, 0);
+    }
+  }
+
+  /* .background-gradient::before {
     background: radial-gradient(
       20% 50% at 50% 50%,
       rgba(71, 127, 247, 0.376) 0%,
@@ -14,6 +77,5 @@
     position: absolute;
     inset: 0px;
     transform: scale(1);
-    pointer-events: none;
-  }
+    pointer-events: none; */
 }

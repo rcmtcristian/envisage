@@ -94,26 +94,27 @@ export default function DreamPage() {
   }
 
   return (
-    <div className="flex max-w-6xl mx-auto flex-col items-center justify-center py-2 min-h-screen">
+    <div className="flex flex-col items-center justify-center max-w-6xl min-h-screen py-2 mx-auto">
       <Header />
-      <main className="flex flex-1 w-full flex-col items-center justify-center text-center px-4 mt-4 sm:mb-0 mb-8">
-        <h1 className="mx-auto max-w-4xl font-display text-4xl font-bold tracking-normal text-slate-100 sm:text-6xl mb-5">
-          Generate your <span className="text-blue-600">dream</span> room
+    
+      <main className="flex flex-col items-center justify-center flex-1 w-full px-4 mt-4 mb-8 text-center sm:mb-0">
+        <h1 className="max-w-4xl mx-auto mb-5 text-4xl font-bold tracking-normal font-display font-Raleway text-slate-100 sm:text-6xl">
+          Generate your <span className="text-blue-600 font-Domine">dream</span> room
         </h1>
         <ResizablePanel>
           <AnimatePresence mode="wait">
-            <motion.div className="flex justify-between items-center w-full flex-col mt-4">
+            <motion.div className="flex flex-col items-center justify-between w-full mt-4">
               {!restoredImage && (
                 <>
-                  <div className="space-y-4 w-full max-w-sm">
-                    <div className="flex mt-3 items-center space-x-3">
+                  <div className="w-full max-w-sm space-y-4">
+                    <div className="flex items-center mt-3 space-x-3">
                       <Image
                         src="/number-1-white.svg"
                         width={30}
                         height={30}
                         alt="1 icon"
                       />
-                      <p className="text-left font-medium">
+                      <p className="font-medium text-left">
                         Choose your room theme.
                       </p>
                     </div>
@@ -125,15 +126,15 @@ export default function DreamPage() {
                       themes={themes}
                     />
                   </div>
-                  <div className="space-y-4 w-full max-w-sm">
-                    <div className="flex mt-10 items-center space-x-3">
+                  <div className="w-full max-w-sm space-y-4">
+                    <div className="flex items-center mt-10 space-x-3">
                       <Image
                         src="/number-2-white.svg"
                         width={30}
                         height={30}
                         alt="1 icon"
                       />
-                      <p className="text-left font-medium">
+                      <p className="font-medium text-left">
                         Choose your room type.
                       </p>
                     </div>
@@ -143,15 +144,15 @@ export default function DreamPage() {
                       themes={rooms}
                     />
                   </div>
-                  <div className="mt-4 w-full max-w-sm">
-                    <div className="flex mt-6 w-96 items-center space-x-3">
+                  <div className="w-full max-w-sm mt-4">
+                    <div className="flex items-center mt-6 space-x-3 w-96">
                       <Image
                         src="/number-3-white.svg"
                         width={30}
                         height={30}
                         alt="1 icon"
                       />
-                      <p className="text-left font-medium">
+                      <p className="font-medium text-left">
                         Upload a picture of your room.
                       </p>
                     </div>
@@ -192,24 +193,24 @@ export default function DreamPage() {
                 />
               )}
               {restoredImage && originalPhoto && !sideBySide && (
-                <div className="flex sm:space-x-4 sm:flex-row flex-col">
+                <div className="flex flex-col sm:space-x-4 sm:flex-row">
                   <div>
-                    <h2 className="mb-1 font-medium text-lg">Original Room</h2>
+                    <h2 className="mb-1 text-lg font-medium">Original Room</h2>
                     <Image
                       alt="original photo"
                       src={originalPhoto}
-                      className="rounded-2xl relative w-full h-96"
+                      className="relative w-full rounded-2xl h-96"
                       width={475}
                       height={475}
                     />
                   </div>
-                  <div className="sm:mt-0 mt-8">
-                    <h2 className="mb-1 font-medium text-lg">Generated Room</h2>
+                  <div className="mt-8 sm:mt-0">
+                    <h2 className="mb-1 text-lg font-medium">Generated Room</h2>
                     <a href={restoredImage} target="_blank" rel="noreferrer">
                       <Image
                         alt="restored photo"
                         src={restoredImage}
-                        className="rounded-2xl relative sm:mt-0 mt-2 cursor-zoom-in w-full h-96"
+                        className="relative w-full mt-2 rounded-2xl sm:mt-0 cursor-zoom-in h-96"
                         width={475}
                         height={475}
                         onLoadingComplete={() => setRestoredLoaded(true)}
@@ -221,7 +222,7 @@ export default function DreamPage() {
               {loading && (
                 <button
                   disabled
-                  className="bg-blue-500 rounded-full text-white font-medium px-4 pt-2 pb-3 mt-8 w-40"
+                  className="w-40 px-4 pt-2 pb-3 mt-8 font-medium text-white bg-blue-500 rounded-full"
                 >
                   <span className="pt-4">
                     <LoadingDots color="white" style="large" />
@@ -230,13 +231,13 @@ export default function DreamPage() {
               )}
               {error && (
                 <div
-                  className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-xl mt-8"
+                  className="px-4 py-3 mt-8 text-red-700 bg-red-100 border border-red-400 rounded-xl"
                   role="alert"
                 >
                   <span className="block sm:inline">{error}</span>
                 </div>
               )}
-              <div className="flex space-x-2 justify-center">
+              <div className="flex justify-center space-x-2">
                 {originalPhoto && !loading && (
                   <button
                     onClick={() => {
@@ -245,7 +246,7 @@ export default function DreamPage() {
                       setRestoredLoaded(false);
                       setError(null);
                     }}
-                    className="bg-blue-500 rounded-full text-white font-medium px-4 py-2 mt-8 hover:bg-blue-500/80 transition"
+                    className="px-4 py-2 mt-8 font-medium text-white transition bg-blue-500 rounded-full hover:bg-blue-500/80"
                   >
                     Generate New Room
                   </button>
@@ -258,7 +259,7 @@ export default function DreamPage() {
                         appendNewToName(photoName!)
                       );
                     }}
-                    className="bg-white rounded-full text-black border font-medium px-4 py-2 mt-8 hover:bg-gray-100 transition"
+                    className="px-4 py-2 mt-8 font-medium text-black transition bg-white border rounded-full hover:bg-gray-100"
                   >
                     Download Generated Room
                   </button>
