@@ -60,7 +60,7 @@ export default function HomePage() {
                 <h3 className="mb-1 text-lg font-medium">Original Room</h3>
                 <Image
                   alt="Original photo of a room with roomGPT.io"
-                  src="/original-pic.jpg"
+                  src="/room-one.jpg"
                   className="object-cover w-full h-96 rounded-2xl"
                   width={400}
                   height={400}
@@ -72,7 +72,7 @@ export default function HomePage() {
                   alt="Generated photo of a room with roomGPT.io"
                   width={400}
                   height={400}
-                  src="/generated-pic-2.jpg"
+                  src="/room-one-rep.png"
                   className="object-cover w-full mt-2 h-96 rounded-2xl sm:mt-0"
                 />
               </div>
